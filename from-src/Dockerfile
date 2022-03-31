@@ -63,6 +63,8 @@ RUN \
 
 WORKDIR ${ROS2_WS}
 RUN \
+	apt-get update \
+	&& \
 	rosdep init \
 	&& \
 	rosdep update \
