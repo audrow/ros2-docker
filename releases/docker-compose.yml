@@ -1,0 +1,9 @@
+services:
+  ros-tools:
+    build: .
+    volumes:
+      - ${HOME}/.ssh:/root/.ssh:ro
+      - ${HOME}/.gitconfig:/root/.gitconfig:ro
+      - ${HOME}/.gitignore:/root/.gitignore:ro
+      - ./config/bloom:/root/.config/bloom:ro
+    working_dir: /root
